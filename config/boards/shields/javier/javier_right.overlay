@@ -1,4 +1,4 @@
-#include "javier.dtsi"
+#include "javier.dtsi";
 
 &default_transform {
   col-offset = <18>;
