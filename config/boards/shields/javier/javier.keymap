@@ -33,7 +33,7 @@
     // };
 
     keymap {
-        compatible = "zmk,keymap";
+        compatible = "zmk,keymap"
 
         default_layer {
             bindings = <
@@ -58,8 +58,8 @@
         //│ 1        │  2       │  3       │  4       │  5       │   │ 6        │ 7        │ 8        │ 9        │   0      │
           &kp LS(N1)  &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5)     &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │  '       │  "       |   |          │ LEFT     │ UP       │ RIGHT    │ ESC      │
-            &none      &none      &none      &kp N4     &kp N3          &none     &kp LARW   &kp UARW   &kp RARW   &kp ESC 
+        //│          │          │          │          │          |   |          │ LEFT     │ UP       │ RIGHT    │ ESC      │
+            &none      &none      &none      &none     &none            &none     &kp LARW   &kp UARW   &kp RARW   &kp ESC 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │ DOWN     │          │          │
             &none     &none      &none      &none       &none          &none      &none      &kp DARW   &none      &none 
@@ -72,14 +72,14 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  @       │  é       │  è       │  -       │  _       │   │  ^       │  &       │  *       │  `       │  ~       │
-          &kp LA(BSLH) &kp N2     &kp N7    &kp EQUAL &kp LS(EQUAL)   &kp LBKT   &kp N1    &kp LS(RBKT)  &kp BSLH   &kp LA(N)
+        //│  @       │  é       │  è       │  "       │  '       │   │  ^       │  &       │  *       │  `       │  ~       │
+          &kp LA(BSLH) &kp N2     &kp N7    &kp N3     &kp N4          &kp LBKT   &kp N1    &kp LS(RBKT)  &kp BSLH   &kp LA(N)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  à       │  [       │  {       │  (       │   <      │   │  +       │  =       │  $       │   €      │  #       │
-            &kp N0  &kp LA(LS(N5)) &kp LA(N5) &kp N5  &kp LS(GRAVE)  &kp LS(FSLH)  &kp FSLH  &kp RBKT  &kp LA(RBKT) &kp LA(LS(BSLH))
+            &kp N0  &kp LA(LS(N5)) &kp LA(N5) &kp N5   &kp GRAVE   &kp LS(FSLH)  &kp FSLH  &kp RBKT  &kp LA(RBKT) &kp LA(LS(BSLH))
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  ù       │  ]       │  }       │  )       │   >      │   │   %      │  !       │  +       │  \       │   |      │
-         &kp SQT &kp LA(LS(MINUS)) &kp LA(MINUS) &kp MINUS &kp GRAVE  &kp LS(SQT)  &kp N8    &kp PLUS   &kp PIPE  &kp LA(LS(L))
+        //│  ù       │  ]       │  }       │  )       │   >      │   │   %      │  !       │  ç       │  \       │   |      │
+        &kp SQT &kp LA(LS(MINUS)) &kp LA(MINUS) &kp MINUS &kp LS(GRAVE) &kp LS(SQT)  &kp N8 &kp N9 &kp LA(LS(DOT)) &kp LA(LS(L))
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                   &none      &trans     &trans         &trans     &none      &none 
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
