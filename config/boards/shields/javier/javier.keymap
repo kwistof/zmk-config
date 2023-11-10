@@ -58,13 +58,13 @@
         //│ 1        │  2       │  3       │  4       │  5       │   │ 6        │ 7        │ 8        │ 9        │   0      │
           &kp LS(N1)  &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5)     &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          |   |          │ LEFT     │ UP       │ RIGHT    │ ESC      │
-            &trans     &trans     &trans     &trans     &trans          &trans    &kp LARW   &kp UARW   &kp RARW   &kp ESC 
+        //│          │          │          │  '       │  "       |   |          │ LEFT     │ UP       │ RIGHT    │ ESC      │
+            &none      &none      &none      &kp N4     &kp N3          &none     &kp LARW   &kp UARW   &kp RARW   &kp ESC 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │ DOWN     │          │          │
-            &trans    &trans     &trans     &trans      &trans         &trans     &trans     &kp DARW   &trans     &trans
+            &none     &none      &none      &none       &none          &none      &none      &kp DARW   &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  &trans     &trans     &trans         &trans     &trans     &trans
+                                  &none      &none      &none          &none      &none      &none 
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -72,16 +72,16 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  @       │  é       │  è       │  $       │  %       │   │  ^       │  &       │  *       │  `       │  ~       │
-          &kp LA(BSLH) &kp N2     &kp N7     &kp DLLR   &kp PRCNT     &kp CARET  &kp AMPS   &kp ASTRK  &kp GRAVE   &kp TILDE
+        //│  @       │  é       │  è       │  -       │  _       │   │  ^       │  &       │  *       │  `       │  ~       │
+          &kp LA(BSLH) &kp N2     &kp N7    &kp EQUAL &kp LS(EQUAL)   &kp LBKT   &kp N1    &kp LS(RBKT)  &kp BSLH   &kp LA(N)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  "       │  [       │  {       │  (       │          │   │   /      │  -       │  =       │     :    │  ;       │
-            &kp DQT   &kp LBKT   &kp LBRC   &kp LPAR    &trans        &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON   &kp SEMI
+        //│  à       │  [       │  {       │  (       │   <      │   │  +       │  =       │  $       │   €      │  #       │
+            &kp N0  &kp LA(LS(N5)) &kp LA(N5) &kp N5  &kp LS(GRAVE)  &kp LS(FSLH)  &kp FSLH  &kp RBKT  &kp LA(RBKT) &kp LA(LS(BSLH))
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  '       │  ]       │  }       │  )       │          │   │    \     │  _       │  +       │  │       │   ?      │
-            &kp SQT     &kp RBKT   &kp RBRC   &kp RPAR   &trans         &kp BSLH   &kp UNDER  &kp PLUS   &kp PIPE  &kp QMARK
+        //│  ù       │  ]       │  }       │  )       │   >      │   │   %      │  !       │  +       │  \       │   |      │
+         &kp SQT &kp LA(LS(MINUS)) &kp LA(MINUS) &kp MINUS &kp GRAVE  &kp LS(SQT)  &kp N8    &kp PLUS   &kp PIPE  &kp LA(LS(L))
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  &trans     &trans     &trans         &trans     &trans     &trans
+                                  &none      &trans     &trans         &trans     &none      &none 
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -94,12 +94,12 @@
         //     &kp F1     &kp F2     &kp F3     &kp F4     &bt BT_SEL 0     &bt BT_SEL 2  &out OUT_TOG &tog WIN  &kp C_MUTE  &kp C_NEXT
         // //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
         // //│  F5      │  F6      │  F7      │  F8       │ PROFILE 1  │   │ PROFILE 3  │ INC BRIGHT │          │  VOL UP   │PAUSEMUSIC│
-        //     &kp F5     &kp F6     &kp F7     &kp F8     &bt BT_SEL 1     &bt BT_SEL 3  &kp C_BRI_UP  &trans   &kp C_VOL_UP  &kp C_PP
+        //     &kp F5     &kp F6     &kp F7     &kp F8     &bt BT_SEL 1     &bt BT_SEL 3  &kp C_BRI_UP  &none    &kp C_VOL_UP  &kp C_PP
         // //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
         // //│  F9      │  F10     │  F11     │  F12      │  CLEAR BT  │   │ PROFILE 4  │ DEC BRIGHT │          |  VOL DOWN │ PREVSONG │
-        //     &kp F9     &kp F10    &kp F11    &kp F12     &bt BT_CLR      &bt BT_SEL 4  &kp C_BRI_DEC  &trans   &kp C_VOL_DN &kp C_PREV
+        //     &kp F9     &kp F10    &kp F11    &kp F12     &bt BT_CLR      &bt BT_SEL 4  &kp C_BRI_DEC  &none    &kp C_VOL_DN &kp C_PREV
         // //╰──────────┴──────────┴──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┴───────────┴──────────╯
-        //                           &trans     &trans      &trans           &trans       &trans       &trans
+        //                           &none      &none       &none            &none        &none        &none 
         // //                      ╰──────────┴───────────┴────────────╯   ╰────────────┴────────────┴──────────╯
         //     >;
         // };
