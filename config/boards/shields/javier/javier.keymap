@@ -6,6 +6,7 @@
 #define LEF 1
 #define RIG 2
 // #define TRI 3
+#define LOL 3
 
 // Home row mod macros
 #define HRML(k1,k2,k3,k4) &ht LSHIFT k1 &kp k2  &kp k3  &kp k4
@@ -43,7 +44,7 @@
             HRML(A,     S,         D,         F)        &kp G          &kp H      HRMR(J,     K,         L,         SEMI)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  W       │  X       │  C       │  V       │  B       │   │  N       │  , ?     │  ; .     │  : /     │   - _    │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N     &kp M      &kp COMMA   &kp DOT   &kp EQUAL
+          &ht LCTL Z   &kp X      &kp C      &kp V      &kp B          &kp N     &kp M      &kp COMMA   &kp DOT   &kp EQUAL
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                 &ht RCMD ESC &kp SPACE &lt LEF TAB   &lt RIG RET  &kp BSPC  &kp LALT
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
@@ -56,8 +57,8 @@
         //│ 1        │  2       │  3       │  4       │  5       │   │ 6        │ 7        │ 8        │ 9        │   0      │
           &kp LS(N1)  &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5)     &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          |   |          │ LEFT     │ UP       │ RIGHT    │ ESC      │
-            &none      &none      &none      &none     &none            &none     &kp LARW   &kp UARW   &kp RARW   &kp ESC 
+        //│          │          │          │          │          |   | LOL      │ LEFT     │ UP       │ RIGHT    │ ESC      │
+            &none      &none      &none      &none     &none           &tog LOL  &kp LARW   &kp UARW   &kp RARW   &kp ESC 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │ DOWN     │          │          │
             &none     &none      &none      &none       &none          &none      &none      &kp DARW   &none      &none 
@@ -80,6 +81,23 @@
         &kp SQT &kp LA(LS(MINUS)) &kp LA(MINUS) &kp MINUS &kp LS(GRAVE) &kp LS(SQT)  &kp N8 &kp N9 &kp LA(LS(DOT)) &kp LA(LS(L))
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                   &trans     &trans     &trans         &trans     &trans     &trans 
+        //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
+            >;
+        };
+
+        lol_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│ G        │  1       │  2       │  3       │  4       │   │          │          │          │          │          │
+           &kp G      &kp N1     &kp N2     &kp N3      &kp N4         &none      &none       &none      &none      &none
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  TAB     │  A       │  Z       │  E       │  R       |   | LOL      │          │          │          │ ESC      │
+            &kp TAB    &kp Q      &kp W      &kp E     &kp R           &tog LOL   &none      &none      &none      &kp ESC 
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  CTRL    │  Q       │  S       │   D      │  F       │   │          │          │          │          │          │
+            &kp LCTL    &kp A     &kp S      &kp D      &kp F         &none      &none      &none       &none      &none 
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                  &kp LALT   &kp SPACE  &kp B         &kp RET     &kp BSPC   &none  
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
