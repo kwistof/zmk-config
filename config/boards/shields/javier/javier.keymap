@@ -88,11 +88,11 @@
         lol_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ G        │  1       │  2       │  3       │  4       │   │          │          │          │          │          │
-           &kp G      &kp N1     &kp N2     &kp N3      &kp N4         &none      &none       &none      &none      &none
+        //│ ESC      │  1       │  2       │  3       │  4       │   │          │          │          │          │          │
+           &kp ESC    &kp N1     &kp N2     &kp N3      &kp N4         &none      &none       &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  TAB     │  A       │  Z       │  E       │  R       |   | LOL      │          │          │          │ ESC      │
-            &kp TAB    &kp Q      &kp W      &kp E     &kp R           &tog LOL   &none      &none      &none      &kp ESC 
+        //│  TAB     │  A       │  Z       │  E       │  R       |   | LOL      │          │          │          │          │
+            &kp TAB    &kp Q      &kp W      &kp E     &kp R           &tog LOL   &none      &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  CTRL    │  Q       │  S       │   D      │  F       │   │          │          │          │          │          │
             &kp LCTL    &kp A     &kp S      &kp D      &kp F         &none      &none      &none       &none      &none 
