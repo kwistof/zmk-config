@@ -44,7 +44,7 @@
             HRML(A,     S,         D,         F)        &kp G          &kp H      HRMR(J,     K,         L,         SEMI)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  W       │  X       │  C       │  V       │  B       │   │  N       │  , ?     │  ; .     │  : /     │   - _    │
-          &ht LCTL Z   &kp X      &kp C      &kp V      &kp B          &kp N     &kp M      &kp COMMA   &kp DOT   &kp EQUAL
+          &ht LCTL Z   &kp X      &kp C      &kp V      &kp B          &kp N     &kp M      &kp COMMA    &kp DOT   &kp EQUAL
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                 &ht RCMD ESC &kp SPACE &lt LEF TAB   &lt RIG RET  &kp BSPC  &kp LALT
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
