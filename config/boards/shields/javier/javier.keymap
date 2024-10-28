@@ -24,7 +24,7 @@
         };
 
         dashes: dashes {
-            compatible = "zmk,behavior-mod-morph";vvcvcrDDDDD
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N6>, <&kp N8>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
