@@ -9,8 +9,8 @@
 #define LOL 3
 
 // Home row mod macros
-#define HRML(k1,k2,k3,k4) &ht LSHIFT k1 &kp k2  &kp k3  &kp k4
-#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3 &ht RSHIFT k4
+#define HRML(k1,k2,k3,k4) &ht LSHIFT k1 &ht LGUI k2  &ht LCTL k3  &kp LSHIFT
+#define HRMR(k1,k2,k3,k4) &ht RSHIFT k1  &ht RCTRL k2  &ht RALT k3 &ht RSHIFT k4
 
 / {
     behaviors {
@@ -54,7 +54,7 @@
         //│  W       │  X       │  C       │  V       │  B       │   │  N       │  , ?     │  ; .     │  : /     │   - _    │
           &ht LCTL Z   &kp X      &kp C      &kp V      &kp B          &kp N     &kp M      &kp COMMA    &kp DOT   &dashes
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                &ht RCMD ESC &kp SPACE &lt LEF TAB   &lt RIG RET  &kp BSPC  &kp LALT
+                                &ht LCTL ESC &kp SPACE &lt LEF TAB   &lt RIG RET  &kp BSPC  &kp LALT
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
